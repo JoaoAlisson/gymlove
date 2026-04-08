@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   const whatsappUrl =
     "https://wa.me/5595981033359?text=" +
-    encodeURIComponent("Oi! Vi o catalogo e gostaria de mais informacoes!");
+    encodeURIComponent("Oi! Vi o catálogo e gostaria de mais informações!");
 
   return (
     <a

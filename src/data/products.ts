@@ -1,4 +1,4 @@
-export type Category = "Macaquinho" | "Macacao" | "Top" | "Short" | "Legging" | "Conjunto";
+export type Category = "Macaquinho" | "Macacão" | "Top" | "Short" | "Legging" | "Conjunto";
 
 export interface Product {
   id: number;
@@ -15,7 +15,7 @@ export interface Product {
 export const categories: { label: string; value: Category | "Todos" }[] = [
   { label: "Todos", value: "Todos" },
   { label: "Macaquinhos", value: "Macaquinho" },
-  { label: "Macacoes", value: "Macacao" },
+  { label: "Macacões", value: "Macacão" },
   { label: "Tops", value: "Top" },
   { label: "Shorts", value: "Short" },
   { label: "Leggings", value: "Legging" },
@@ -25,23 +25,23 @@ export const categories: { label: string; value: Category | "Todos" }[] = [
 export const products: Product[] = [
   {
     id: 1,
-    name: "Macaquinho Frente Unica",
+    name: "Macaquinho Frente Única",
     price: "R$ 351,90",
     priceValue: 351.9,
     images: ["/products/01-frente.jpg", "/products/02-costas.jpg"],
-    description: "Macaquinho com design frente unica, perfeito para treinos intensos",
+    description: "Macaquinho com design frente única, perfeito para treinos intensos",
     category: "Macaquinho",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
   {
     id: 2,
-    name: "Macacao Regata",
+    name: "Macacão Regata",
     price: "R$ 516,90",
     priceValue: 516.9,
     images: ["/products/03-frente.jpg", "/products/04-costas.jpg"],
-    description: "Macacao regata com ziper frontal, ideal para musculacao",
-    category: "Macacao",
+    description: "Macacão regata com zíper frontal, ideal para musculação",
+    category: "Macacão",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -50,7 +50,7 @@ export const products: Product[] = [
     price: "R$ 375,90",
     priceValue: 375.9,
     images: ["/products/05-frente.jpg", "/products/06-costas.jpg"],
-    description: "Macaquinho com bolsos laterais, pratico e estiloso",
+    description: "Macaquinho com bolsos laterais, prático e estiloso",
     category: "Macaquinho",
     sizes: ["P", "M", "G"],
     highlight: true,
@@ -61,7 +61,7 @@ export const products: Product[] = [
     price: "R$ 368,90",
     priceValue: 368.9,
     images: ["/products/07.jpg"],
-    description: "Macaquinho hiper com ziper, versatil para qualquer atividade",
+    description: "Macaquinho hiper com zíper, versátil para qualquer atividade",
     category: "Macaquinho",
     sizes: ["P", "M", "G"],
   },
@@ -71,7 +71,7 @@ export const products: Product[] = [
     price: "R$ 385,90",
     priceValue: 385.9,
     images: ["/products/08.jpg"],
-    description: "Macaquinho manga longa, protecao e conforto",
+    description: "Macaquinho manga longa, proteção e conforto",
     category: "Macaquinho",
     sizes: ["P", "M", "G"],
   },
@@ -81,7 +81,7 @@ export const products: Product[] = [
     price: "R$ 158,90",
     priceValue: 158.9,
     images: ["/products/09.jpg"],
-    description: "Macaquinho leve e confortavel para o dia a dia fitness",
+    description: "Macaquinho leve e confortável para o dia a dia fitness",
     category: "Macaquinho",
     sizes: ["P", "M", "G", "GG"],
     highlight: true,
@@ -92,7 +92,7 @@ export const products: Product[] = [
     price: "R$ 152,90",
     priceValue: 152.9,
     images: ["/products/10.jpg"],
-    description: "Top esportivo verde com sustentacao e estilo",
+    description: "Top esportivo verde com sustentação e estilo",
     category: "Top",
     sizes: ["P", "M", "G"],
   },
@@ -112,7 +112,7 @@ export const products: Product[] = [
     price: "R$ 285,90",
     priceValue: 285.9,
     images: ["/products/12.jpg"],
-    description: "Legging com bolso e tecido brilhoso de alta compressao",
+    description: "Legging com bolso e tecido brilhoso de alta compressão",
     category: "Legging",
     sizes: ["P", "M", "G", "GG"],
   },
@@ -138,12 +138,12 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: "Macacao Preto",
+    name: "Macacão Preto",
     price: "R$ 339,90",
     priceValue: 339.9,
     images: ["/products/15.jpg"],
-    description: "Macacao preto classico, elegancia para seus treinos",
-    category: "Macacao",
+    description: "Macacão preto clássico, elegância para seus treinos",
+    category: "Macacão",
     sizes: ["P", "M", "G", "GG"],
   },
 ];

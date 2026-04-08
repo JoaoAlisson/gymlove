@@ -20,7 +20,7 @@ export default function ProductGrid() {
           Nosso <span className="text-brand-teal">Cat&aacute;logo</span>
         </h2>
         <p className="text-zinc-500 text-sm sm:text-base max-w-md mx-auto">
-          Pecas selecionadas com qualidade, conforto e estilo para seus treinos
+          Peças selecionadas com qualidade, conforto e estilo para seus treinos
         </p>
       </div>
 

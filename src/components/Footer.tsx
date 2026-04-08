@@ -15,7 +15,7 @@ export default function Footer() {
               </h3>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              Moda fitness com estilo, conforto e qualidade para voce arrasar nos treinos.
+              Moda fitness com estilo, conforto e qualidade para você arrasar nos treinos.
             </p>
             <p className="text-xs text-zinc-500 mt-2">
               Av. Ville Roy, 4430, comercial Lucena, sl. 3 - Boa Vista/RR
@@ -58,12 +58,12 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
-              Navegacao
+              Navegação
             </h4>
             <ul className="space-y-2 text-sm text-zinc-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Inicio
+                  Início
                 </a>
               </li>
               <li>

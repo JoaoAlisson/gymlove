@@ -10,10 +10,10 @@ export default function PromoBanner() {
   return (
     <div className="relative bg-brand-teal text-white text-center py-2.5 px-4 text-sm font-medium">
       <span className="hidden sm:inline">
-        Pecas selecionadas com ate <strong>25% OFF</strong> &mdash; Aproveite, estoque limitado!
+        Peças selecionadas com até <strong>25% OFF</strong> &mdash; Aproveite, estoque limitado!
       </span>
       <span className="sm:hidden">
-        Ate <strong>25% OFF</strong> em pecas selecionadas!
+        Até <strong>25% OFF</strong> em peças selecionadas!
       </span>
       <a
         href="https://wa.me/5595981033359?text=Oi!%20Quero%20saber%20sobre%20as%20promo%C3%A7%C3%B5es!"

@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
     `Oi! Tenho interesse no produto:\n\n` +
     `*${product.name}*\n` +
     `Valor: ${product.price}\n\n` +
-    `Gostaria de mais informacoes sobre tamanhos e disponibilidade!`
+    `Gostaria de mais informações sobre tamanhos e disponibilidade!`
   );
   const whatsappUrl = `https://wa.me/5595981033359?text=${whatsappMessage}`;
 
