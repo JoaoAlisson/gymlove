@@ -1,3 +1,5 @@
+export type Category = "Macaquinho" | "Macacao" | "Top" | "Short" | "Legging" | "Conjunto";
+
 export interface Product {
   id: number;
   name: string;
@@ -5,7 +7,20 @@ export interface Product {
   priceValue: number;
   images: string[];
   description?: string;
+  category: Category;
+  sizes?: string[];
+  highlight?: boolean;
 }
+
+export const categories: { label: string; value: Category | "Todos" }[] = [
+  { label: "Todos", value: "Todos" },
+  { label: "Macaquinhos", value: "Macaquinho" },
+  { label: "Macacoes", value: "Macacao" },
+  { label: "Tops", value: "Top" },
+  { label: "Shorts", value: "Short" },
+  { label: "Leggings", value: "Legging" },
+  { label: "Conjuntos", value: "Conjunto" },
+];
 
 export const products: Product[] = [
   {
@@ -15,6 +30,9 @@ export const products: Product[] = [
     priceValue: 351.9,
     images: ["/products/01-frente.jpg", "/products/02-costas.jpg"],
     description: "Macaquinho com design frente unica, perfeito para treinos intensos",
+    category: "Macaquinho",
+    sizes: ["P", "M", "G"],
+    highlight: true,
   },
   {
     id: 2,
@@ -23,6 +41,8 @@ export const products: Product[] = [
     priceValue: 516.9,
     images: ["/products/03-frente.jpg", "/products/04-costas.jpg"],
     description: "Macacao regata com ziper frontal, ideal para musculacao",
+    category: "Macacao",
+    sizes: ["P", "M", "G", "GG"],
   },
   {
     id: 3,
@@ -31,6 +51,9 @@ export const products: Product[] = [
     priceValue: 375.9,
     images: ["/products/05-frente.jpg", "/products/06-costas.jpg"],
     description: "Macaquinho com bolsos laterais, pratico e estiloso",
+    category: "Macaquinho",
+    sizes: ["P", "M", "G"],
+    highlight: true,
   },
   {
     id: 4,
@@ -39,6 +62,8 @@ export const products: Product[] = [
     priceValue: 368.9,
     images: ["/products/07.jpg"],
     description: "Macaquinho hiper com ziper, versatil para qualquer atividade",
+    category: "Macaquinho",
+    sizes: ["P", "M", "G"],
   },
   {
     id: 5,
@@ -47,6 +72,8 @@ export const products: Product[] = [
     priceValue: 385.9,
     images: ["/products/08.jpg"],
     description: "Macaquinho manga longa, protecao e conforto",
+    category: "Macaquinho",
+    sizes: ["P", "M", "G"],
   },
   {
     id: 6,
@@ -55,6 +82,9 @@ export const products: Product[] = [
     priceValue: 158.9,
     images: ["/products/09.jpg"],
     description: "Macaquinho leve e confortavel para o dia a dia fitness",
+    category: "Macaquinho",
+    sizes: ["P", "M", "G", "GG"],
+    highlight: true,
   },
   {
     id: 7,
@@ -63,6 +93,8 @@ export const products: Product[] = [
     priceValue: 152.9,
     images: ["/products/10.jpg"],
     description: "Top esportivo verde com sustentacao e estilo",
+    category: "Top",
+    sizes: ["P", "M", "G"],
   },
   {
     id: 8,
@@ -71,6 +103,8 @@ export const products: Product[] = [
     priceValue: 191.9,
     images: ["/products/11.jpg"],
     description: "Short com bolso lateral para celular",
+    category: "Short",
+    sizes: ["P", "M", "G", "GG"],
   },
   {
     id: 9,
@@ -79,6 +113,8 @@ export const products: Product[] = [
     priceValue: 285.9,
     images: ["/products/12.jpg"],
     description: "Legging com bolso e tecido brilhoso de alta compressao",
+    category: "Legging",
+    sizes: ["P", "M", "G", "GG"],
   },
   {
     id: 10,
@@ -87,6 +123,8 @@ export const products: Product[] = [
     priceValue: 262.9,
     images: ["/products/13.jpg"],
     description: "Short sobreposto, estilo e liberdade de movimento",
+    category: "Short",
+    sizes: ["P", "M", "G"],
   },
   {
     id: 11,
@@ -95,6 +133,8 @@ export const products: Product[] = [
     priceValue: 380.8,
     images: ["/products/14.jpg"],
     description: "Conjunto combinando top e short na cor rosa",
+    category: "Conjunto",
+    sizes: ["P", "M", "G"],
   },
   {
     id: 12,
@@ -103,5 +143,7 @@ export const products: Product[] = [
     priceValue: 339.9,
     images: ["/products/15.jpg"],
     description: "Macacao preto classico, elegancia para seus treinos",
+    category: "Macacao",
+    sizes: ["P", "M", "G", "GG"],
   },
 ];

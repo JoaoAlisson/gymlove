@@ -13,14 +13,19 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Gym Love | Moda Fitness",
+  title: "Gym Love | Moda Fitness Boa Vista",
   description:
-    "Catalogo de moda fitness Gym Love. Macaquinhos, leggings, tops e conjuntos com estilo e conforto para seus treinos.",
-  keywords: ["moda fitness", "gym love", "macaquinho", "legging", "top", "boa vista"],
+    "Catalogo de moda fitness Gym Love. Macaquinhos, leggings, tops e conjuntos com estilo e conforto para seus treinos. Loja fisica em Boa Vista/RR.",
+  keywords: ["moda fitness", "gym love", "macaquinho", "legging", "top", "boa vista", "roraima", "moda fitness boa vista"],
   openGraph: {
-    title: "Gym Love | Moda Fitness",
-    description: "Catalogo de moda fitness com estilo e conforto",
+    title: "Gym Love | Moda Fitness Boa Vista",
+    description: "Risco de se viciar em looks fitness! Macaquinhos, leggings, tops e conjuntos. Confira nosso catalogo.",
     type: "website",
+    siteName: "Gym Love",
+    locale: "pt_BR",
+  },
+  other: {
+    "instagram:creator": "@gymlovebv",
   },
 };
 
