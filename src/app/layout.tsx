@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     siteName: "Gym Love",
     locale: "pt_BR",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icon-192.png",
+  },
   other: {
     "instagram:creator": "@gymlovebv",
   },
