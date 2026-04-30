@@ -2,14 +2,23 @@
 
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import { products, categories, type Category } from "@/data/products";
+import { products, categories, type Category, type Gender } from "@/data/products";
+
+const genders: { label: string; value: Gender | "Todos" }[] = [
+  { label: "Todos", value: "Todos" },
+  { label: "Feminino", value: "feminino" },
+  { label: "Masculino", value: "masculino" },
+];
 
 export default function ProductGrid() {
   const [activeCategory, setActiveCategory] = useState<Category | "Todos">("Todos");
+  const [activeGender, setActiveGender] = useState<Gender | "Todos">("Todos");
 
-  const filtered = activeCategory === "Todos"
-    ? products
-    : products.filter((p) => p.category === activeCategory);
+  const filtered = products.filter((p) => {
+    const matchCategory = activeCategory === "Todos" || p.category === activeCategory;
+    const matchGender = activeGender === "Todos" || p.gender === activeGender;
+    return matchCategory && matchGender;
+  });
 
   const count = filtered.length;
 
@@ -22,6 +31,22 @@ export default function ProductGrid() {
         <p className="text-zinc-500 text-sm sm:text-base max-w-md mx-auto">
           Peças selecionadas com qualidade, conforto e estilo para seus treinos
         </p>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+        {genders.map((g) => (
+          <button
+            key={g.value}
+            onClick={() => setActiveGender(g.value)}
+            className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+              activeGender === g.value
+                ? "bg-brand-dark text-white shadow-sm"
+                : "bg-white text-zinc-600 border border-zinc-200 hover:border-brand-dark/40 hover:text-brand-dark"
+            }`}
+          >
+            {g.label}
+          </button>
+        ))}
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-2 mb-8 sm:mb-10">

@@ -1,4 +1,5 @@
 export type Category = "Macaquinho" | "Macacão" | "Top" | "Short" | "Legging" | "Conjunto";
+export type Gender = "feminino" | "masculino";
 
 export interface Product {
   id: number;
@@ -8,6 +9,7 @@ export interface Product {
   images: string[];
   description?: string;
   category: Category;
+  gender: Gender;
   sizes?: string[];
   highlight?: boolean;
 }
@@ -31,6 +33,7 @@ export const products: Product[] = [
     images: ["/products/01-frente.jpg", "/products/02-costas.jpg"],
     description: "Macaquinho com design frente única, perfeito para treinos intensos",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -42,6 +45,7 @@ export const products: Product[] = [
     images: ["/products/03-frente.jpg", "/products/04-costas.jpg"],
     description: "Macacão regata com zíper frontal, ideal para musculação",
     category: "Macacão",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -52,6 +56,7 @@ export const products: Product[] = [
     images: ["/products/05-frente.jpg", "/products/06-costas.jpg"],
     description: "Macaquinho com bolsos laterais, prático e estiloso",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -63,6 +68,7 @@ export const products: Product[] = [
     images: ["/products/07.jpg"],
     description: "Macaquinho hiper com zíper, versátil para qualquer atividade",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -73,6 +79,7 @@ export const products: Product[] = [
     images: ["/products/08.jpg"],
     description: "Macaquinho manga longa, proteção e conforto",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -83,6 +90,7 @@ export const products: Product[] = [
     images: ["/products/09.jpg"],
     description: "Macaquinho leve e confortável para o dia a dia fitness",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
     highlight: true,
   },
@@ -94,6 +102,7 @@ export const products: Product[] = [
     images: ["/products/10.jpg", "/products/33.jpg"],
     description: "Top esportivo verde com sustentação e estilo",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -104,6 +113,7 @@ export const products: Product[] = [
     images: ["/products/11.jpg", "/products/34.jpg"],
     description: "Short com bolso lateral para celular",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -114,6 +124,7 @@ export const products: Product[] = [
     images: ["/products/12.jpg", "/products/35.jpg"],
     description: "Legging com bolso e tecido brilhoso de alta compressão",
     category: "Legging",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -124,6 +135,7 @@ export const products: Product[] = [
     images: ["/products/13.jpg", "/products/36.jpg"],
     description: "Short sobreposto Valley, estilo e liberdade de movimento",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -134,6 +146,7 @@ export const products: Product[] = [
     images: ["/products/14.jpg"],
     description: "Conjunto combinando top e short na cor rosa",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -144,6 +157,7 @@ export const products: Product[] = [
     images: ["/products/15.jpg", "/products/37.jpg"],
     description: "Macacão preto clássico, elegância para seus treinos",
     category: "Macacão",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -154,6 +168,7 @@ export const products: Product[] = [
     images: ["/products/16.jpg"],
     description: "Short feminino com bolsos pocket",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -165,6 +180,7 @@ export const products: Product[] = [
     images: ["/products/17.jpg"],
     description: "Top Dusell com sustentação e estilo",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -175,6 +191,7 @@ export const products: Product[] = [
     images: ["/products/18.jpg", "/products/41.jpg"],
     description: "Legging rosa imperial Drop Chantilly, alta compressão",
     category: "Legging",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
     highlight: true,
   },
@@ -186,6 +203,7 @@ export const products: Product[] = [
     images: ["/products/19.jpg"],
     description: "Blusa feminina fitness Wonder",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -196,6 +214,7 @@ export const products: Product[] = [
     images: ["/products/20.jpg", "/products/28.jpg"],
     description: "Top duplo New Basic liso",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -206,6 +225,7 @@ export const products: Product[] = [
     images: ["/products/21.jpg"],
     description: "Short Wonder com bolso lateral",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -216,6 +236,7 @@ export const products: Product[] = [
     images: ["/products/22.jpg"],
     description: "Bermuda moletom Crown",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -226,6 +247,7 @@ export const products: Product[] = [
     images: ["/products/23.jpg"],
     description: "Conjunto de calça rosa fitness",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -237,6 +259,7 @@ export const products: Product[] = [
     images: ["/products/24.jpg"],
     description: "Macaquinho Elite feminino, leve e confortável",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -247,6 +270,7 @@ export const products: Product[] = [
     images: ["/products/25.jpg"],
     description: "Conjunto de calça lilás fitness",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -257,6 +281,7 @@ export const products: Product[] = [
     images: ["/products/26.jpg"],
     description: "Conjunto Top Authentic e Short Authentic",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -267,6 +292,7 @@ export const products: Product[] = [
     images: ["/products/27.jpg"],
     description: "Conjunto Hot fitness",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -278,6 +304,7 @@ export const products: Product[] = [
     images: ["/products/29.jpg"],
     description: "Jaqueta manga longa fitness, conforto e proteção",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -288,6 +315,7 @@ export const products: Product[] = [
     images: ["/products/30.jpg"],
     description: "Macaquinho Hyper feminino com zíper",
     category: "Macaquinho",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
     highlight: true,
   },
@@ -299,6 +327,7 @@ export const products: Product[] = [
     images: ["/products/31.jpg"],
     description: "Conjunto Top Faixa e Short Hyper Tranpass",
     category: "Conjunto",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -309,6 +338,7 @@ export const products: Product[] = [
     images: ["/products/32.jpg"],
     description: "Camiseta Gota feminina",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -319,6 +349,7 @@ export const products: Product[] = [
     images: ["/products/38.jpg"],
     description: "Short Hyper feminino",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -329,6 +360,7 @@ export const products: Product[] = [
     images: ["/products/39.jpg"],
     description: "Short saia Compression com sobreposição",
     category: "Short",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
   {
@@ -339,6 +371,7 @@ export const products: Product[] = [
     images: ["/products/40.jpg"],
     description: "Top Faixa feminino",
     category: "Top",
+    gender: "feminino",
     sizes: ["P", "M", "G"],
   },
 ];
