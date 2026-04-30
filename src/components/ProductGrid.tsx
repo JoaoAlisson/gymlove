@@ -40,8 +40,8 @@ export default function ProductGrid() {
             onClick={() => setActiveGender(g.value)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
               activeGender === g.value
-                ? "bg-brand-dark text-white shadow-sm"
-                : "bg-white text-zinc-600 border border-zinc-200 hover:border-brand-dark/40 hover:text-brand-dark"
+                ? "bg-brand-teal text-white shadow-sm"
+                : "bg-white text-zinc-600 border border-zinc-200 hover:border-brand-teal/40 hover:text-brand-teal"
             }`}
           >
             {g.label}
