@@ -52,17 +52,19 @@ export default function ProductCard({ product }: { product: Product }) {
                       ? "bg-brand-teal w-6"
                       : "bg-white/60 hover:bg-white/90"
                   }`}
-                  aria-label={i === 0 ? "Frente" : "Costas"}
+                  aria-label={`Imagem ${i + 1}`}
                 />
               ))}
             </div>
             <button
-              onClick={() => setCurrentImage(currentImage === 0 ? 1 : 0)}
+              onClick={() => setCurrentImage((currentImage + 1) % product.images.length)}
               className="absolute inset-0 z-[5] cursor-pointer"
-              aria-label="Alternar imagem"
+              aria-label="Próxima imagem"
             />
             <span className="absolute top-3 right-3 bg-brand-dark/70 text-xs text-white px-2.5 py-1 rounded-full backdrop-blur-sm">
-              {currentImage === 0 ? "Frente" : "Costas"}
+              {product.images.length === 2
+                ? currentImage === 0 ? "Frente" : "Costas"
+                : `${currentImage + 1}/${product.images.length}`}
             </span>
           </>
         )}

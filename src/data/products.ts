@@ -1,4 +1,15 @@
-export type Category = "Macaquinho" | "Macacão" | "Top" | "Short" | "Legging" | "Conjunto";
+export type Category =
+  | "Macaquinho"
+  | "Macacão"
+  | "Top"
+  | "Camiseta"
+  | "Short"
+  | "Bermuda"
+  | "Calça"
+  | "Legging"
+  | "Jaqueta"
+  | "Conjunto"
+  | "Acessório";
 export type Gender = "feminino" | "masculino";
 
 export interface Product {
@@ -19,17 +30,22 @@ export const categories: { label: string; value: Category | "Todos" }[] = [
   { label: "Macaquinhos", value: "Macaquinho" },
   { label: "Macacões", value: "Macacão" },
   { label: "Tops", value: "Top" },
+  { label: "Camisetas", value: "Camiseta" },
   { label: "Shorts", value: "Short" },
+  { label: "Bermudas", value: "Bermuda" },
+  { label: "Calças", value: "Calça" },
   { label: "Leggings", value: "Legging" },
+  { label: "Jaquetas", value: "Jaqueta" },
   { label: "Conjuntos", value: "Conjunto" },
+  { label: "Acessórios", value: "Acessório" },
 ];
 
 export const products: Product[] = [
   {
     id: 1,
     name: "Macaquinho Frente Única",
-    price: "R$ 351,90",
-    priceValue: 351.9,
+    price: "R$ 375,90",
+    priceValue: 375.9,
     images: ["/products/01-frente.jpg", "/products/02-costas.jpg"],
     description: "Macaquinho com design frente única, perfeito para treinos intensos",
     category: "Macaquinho",
@@ -39,7 +55,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Macacão Regata",
+    name: "Macacão Regata c/ Zíper",
     price: "R$ 516,90",
     priceValue: 516.9,
     images: ["/products/03-frente.jpg", "/products/04-costas.jpg"],
@@ -62,11 +78,11 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Macaquinho Hiper",
+    name: "Macaquinho Hyper",
     price: "R$ 368,90",
     priceValue: 368.9,
     images: ["/products/07.jpg"],
-    description: "Macaquinho hiper com zíper, versátil para qualquer atividade",
+    description: "Macaquinho Hyper com zíper, versátil para qualquer atividade",
     category: "Macaquinho",
     gender: "feminino",
     sizes: ["P", "M", "G"],
@@ -74,8 +90,8 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Macaquinho Manga Longa",
-    price: "R$ 385,90",
-    priceValue: 385.9,
+    price: "R$ 375,90",
+    priceValue: 375.9,
     images: ["/products/08.jpg"],
     description: "Macaquinho manga longa, proteção e conforto",
     category: "Macaquinho",
@@ -85,8 +101,8 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Macaquinho My Fit Mood",
-    price: "R$ 158,90",
-    priceValue: 158.9,
+    price: "R$ 297,90",
+    priceValue: 297.9,
     images: ["/products/09.jpg"],
     description: "Macaquinho leve e confortável para o dia a dia fitness",
     category: "Macaquinho",
@@ -97,8 +113,8 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Top Verde",
-    price: "R$ 152,90",
-    priceValue: 152.9,
+    price: "R$ 189,90",
+    priceValue: 189.9,
     images: ["/products/10.jpg", "/products/33.jpg"],
     description: "Top esportivo verde com sustentação e estilo",
     category: "Top",
@@ -108,8 +124,8 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Short Dusell",
-    price: "R$ 191,90",
-    priceValue: 191.9,
+    price: "R$ 222,90",
+    priceValue: 222.9,
     images: ["/products/11.jpg", "/products/34.jpg"],
     description: "Short com bolso lateral para celular",
     category: "Short",
@@ -141,8 +157,8 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Conjunto Top + Short Rosa",
-    price: "Top R$ 189,90 / Short R$ 191,90",
-    priceValue: 380.8,
+    price: "R$ 200,90",
+    priceValue: 200.9,
     images: ["/products/14.jpg"],
     description: "Conjunto combinando top e short na cor rosa",
     category: "Conjunto",
@@ -152,8 +168,8 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Macacão Preto",
-    price: "R$ 339,90",
-    priceValue: 339.9,
+    price: "R$ 349,90",
+    priceValue: 349.9,
     images: ["/products/15.jpg", "/products/37.jpg"],
     description: "Macacão preto clássico, elegância para seus treinos",
     category: "Macacão",
@@ -175,8 +191,8 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Top Dusell",
-    price: "R$ 260,90",
-    priceValue: 260.9,
+    price: "R$ 184,90",
+    priceValue: 184.9,
     images: ["/products/17.jpg"],
     description: "Top Dusell com sustentação e estilo",
     category: "Top",
@@ -235,8 +251,8 @@ export const products: Product[] = [
     priceValue: 95.9,
     images: ["/products/22.jpg"],
     description: "Bermuda moletom Crown",
-    category: "Short",
-    gender: "feminino",
+    category: "Bermuda",
+    gender: "masculino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -303,13 +319,13 @@ export const products: Product[] = [
     priceValue: 248.9,
     images: ["/products/29.jpg"],
     description: "Jaqueta manga longa fitness, conforto e proteção",
-    category: "Top",
+    category: "Jaqueta",
     gender: "feminino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
     id: 26,
-    name: "Macaquinho Hyper",
+    name: "Macaquinho Hyper (variação)",
     price: "R$ 368,90",
     priceValue: 368.9,
     images: ["/products/30.jpg"],
@@ -336,16 +352,16 @@ export const products: Product[] = [
     price: "R$ 173,00",
     priceValue: 173,
     images: ["/products/32.jpg"],
-    description: "Camiseta Gota feminina",
-    category: "Top",
-    gender: "feminino",
+    description: "Camiseta Gota masculina",
+    category: "Camiseta",
+    gender: "masculino",
     sizes: ["P", "M", "G", "GG"],
   },
   {
     id: 29,
     name: "Short Hyper",
-    price: "R$ 175,90",
-    priceValue: 175.9,
+    price: "R$ 159,90",
+    priceValue: 159.9,
     images: ["/products/38.jpg"],
     description: "Short Hyper feminino",
     category: "Short",
@@ -373,5 +389,28 @@ export const products: Product[] = [
     category: "Top",
     gender: "feminino",
     sizes: ["P", "M", "G"],
+  },
+  {
+    id: 32,
+    name: "Calça Moletom Crown",
+    price: "R$ 140,99",
+    priceValue: 140.99,
+    images: [
+      "/products/calca-crown-1.jpg",
+      "/products/calca-crown-2.jpg",
+      "/products/calca-crown-3.jpg",
+      "/products/calca-crown-4.jpg",
+      "/products/calca-crown-5.jpg",
+      "/products/calca-crown-6.jpg",
+      "/products/calca-crown-7.jpg",
+      "/products/calca-crown-8.jpg",
+      "/products/calca-crown-9.jpg",
+      "/products/calca-crown-10.jpg",
+    ],
+    description: "Calça moletom Crown masculina",
+    category: "Calça",
+    gender: "masculino",
+    sizes: ["P", "M", "G", "GG"],
+    highlight: true,
   },
 ];
