@@ -98,9 +98,11 @@ export default function ProductCard({ product }: { product: Product }) {
             <span className="block text-lg sm:text-xl font-bold text-brand-teal">
               {product.price}
             </span>
-            <span className="text-[11px] text-zinc-400">
-              ou {parcelas}x de R$ {formatInstallment(product.priceValue, parcelas)}
-            </span>
+            {product.priceValue > 0 && (
+              <span className="text-[11px] text-zinc-400">
+                ou {parcelas}x de R$ {formatInstallment(product.priceValue, parcelas)}
+              </span>
+            )}
           </div>
           <a
             href={whatsappUrl}
