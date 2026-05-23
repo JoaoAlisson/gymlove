@@ -34,10 +34,23 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        {product.highlight && (
-          <span className="absolute top-3 left-3 bg-brand-teal text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10">
-            Destaque
+        {product.category === "Copa" ? (
+          <span className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-white/95 pl-1 pr-2.5 py-1 shadow-sm backdrop-blur-sm ring-1 ring-br-green/15">
+            <svg viewBox="0 0 24 16" className="h-3.5 w-5 rounded-[2px] overflow-hidden" aria-hidden>
+              <rect width="24" height="16" fill="#009C3B" />
+              <polygon points="12,2 22,8 12,14 2,8" fill="#FFDF00" />
+              <circle cx="12" cy="8" r="2.5" fill="#002776" />
+            </svg>
+            <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-br-green-dark">
+              Copa 2026
+            </span>
           </span>
+        ) : (
+          product.highlight && (
+            <span className="absolute top-3 left-3 bg-brand-teal text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10">
+              Destaque
+            </span>
+          )
         )}
 
         {hasMultipleImages && (
