@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ProductCard from "./ProductCard";
 import { products, categories, type Category, type Gender } from "@/data/products";
 
@@ -13,6 +13,7 @@ const genders: { label: string; value: Gender | "Todos" }[] = [
 export default function ProductGrid() {
   const [activeCategory, setActiveCategory] = useState<Category | "Todos">("Todos");
   const [activeGender, setActiveGender] = useState<Gender | "Todos">("Todos");
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const filtered = products.filter((p) => {
     const matchCategory = activeCategory === "Todos" || p.category === activeCategory;
@@ -37,6 +38,9 @@ export default function ProductGrid() {
         onClick={() => {
           setActiveCategory("Copa");
           setActiveGender("Todos");
+          requestAnimationFrame(() => {
+            gridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
         }}
         className="group relative flex w-full items-center mb-8 sm:mb-10 overflow-hidden rounded-2xl bg-br-green-dark text-left shadow-sm hover:shadow-xl hover:shadow-br-green/15 transition-all"
         aria-label="Ver coleção Copa 2026"
@@ -146,7 +150,7 @@ export default function ProductGrid() {
       {count === 0 ? (
         <p className="text-center text-zinc-400 py-12">Nenhum produto encontrado nesta categoria.</p>
       ) : (
-        <>
+        <div ref={gridRef} className="scroll-mt-20 sm:scroll-mt-24">
           <p className="text-xs text-zinc-400 mb-4">
             {count} {count === 1 ? "produto" : "produtos"}
           </p>
@@ -155,7 +159,7 @@ export default function ProductGrid() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </>
+        </div>
       )}
     </section>
   );
